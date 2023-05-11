@@ -6,6 +6,19 @@ const { Core } = require("../core/index.ts");
 module.exports = async ({ src, dest, item }) => {
     return new Promise(async (resolve, reject) => {
         try {
+            await new Promise(resolve => {
+                const script = document.createElement("script");
+                script.src = url.pathToFileURL(path.resolve(`${__dirname}/lib/jszip.min.js`)).href;
+                document.body.appendChild(script);
+                script.addEventListener("load", resolve);
+            });
+            await new Promise(resolve => {
+                const script = document.createElement("script");
+                script.src = url.pathToFileURL(path.resolve(`${__dirname}/lib/jszip-utils.min.js`)).href;
+                document.body.appendChild(script);
+                script.addEventListener("load", resolve);
+            });
+
             const div = document.createElement("div");
             div.id = "player";
             document.body.appendChild(div);
