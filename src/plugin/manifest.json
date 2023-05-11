@@ -6,7 +6,7 @@
     "name": "SVGA 格式扩展",
     "logo": "/logo.png",
     "keywords": ["SVGA"],
-    "devTools": true,
+    "devTools": false,
     "preview": {
         "svga": {
             "thumbnail": {
