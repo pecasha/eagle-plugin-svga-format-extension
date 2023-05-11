@@ -1,0 +1,20 @@
+{
+    "id": "51b978d2-306a-4552-a1f5-afd743a41900",
+    "version": "1.0.0",
+    "platform": "all",
+    "arch": "all",
+    "name": "SVGA 格式扩展",
+    "logo": "/logo.png",
+    "keywords": ["SVGA"],
+    "devTools": true,
+    "preview": {
+        "svga": {
+            "thumbnail": {
+                "path": "thumbnail.js"
+            },
+            "viewer": {
+                "path": "viewer.html"
+            }
+        }
+    }
+}
