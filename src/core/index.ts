@@ -19,6 +19,7 @@ export class Core {
     #loaded = false;
 
     #player = {} as SVGA.Player;
+
     #parse = {} as SVGA.Parser;
     #file = {} as SVGA.VideoEntity;
 
@@ -54,12 +55,4 @@ export class Core {
     public getSize() {
         return this.#file.videoSize;
     }
-
-    /*#onResize() {
-        const style = window.getComputedStyle(this.#options.canvas, null);
-        this.#options.canvas.width = Number(style.width.replace("px", "")) * this.#options.devicePixelRatio;
-        this.#options.canvas.height = Number(style.height.replace("px", "")) * this.#options.devicePixelRatio;
-        this.#pagView.updateSize?.();
-        this.#pagView.flush?.();
-    }*/
 }
