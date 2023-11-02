@@ -3,10 +3,21 @@
     "version": "1.0.0",
     "platform": "all",
     "arch": "all",
-    "name": "SVGA 格式扩展",
+    "name": "{{manifest.app.name}}",
     "logo": "/logo.png",
-    "keywords": ["SVGA"],
     "devTools": false,
+    "keywords": ["SVGA"],
+    "fallbackLanguage": "zh_CN",
+    "languages": [
+        "de_DE",
+        "en",
+        "es_ES",
+        "ja_JP",
+        "ko_KR",
+        "ru_RU",
+        "zh_CN",
+        "zh_TW"
+    ],
     "preview": {
         "svga": {
             "thumbnail": {
