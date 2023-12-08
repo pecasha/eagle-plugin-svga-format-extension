@@ -43,6 +43,7 @@ module.exports = async ({ src, dest, item }) => {
 
             item.width = size.width;
             item.height = size.height;
+            item.duration = Math.ceil(svga.svgaFile.frames / svga.svgaFile.FPS);
             resolve(item);
         } catch (err) {
             reject(err);
