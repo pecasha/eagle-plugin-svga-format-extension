@@ -47,6 +47,9 @@ export class Core {
         this.#file = await new Promise<SVGA.VideoEntity>((resolve, reject) => {
             this.#parse.load(fileUrl, resolve, reject);
         });
+        const $el = document.querySelector(this.#options.element) as HTMLDivElement;
+        $el.style.width = `${this.#file.videoSize.width}px`;
+        $el.style.height = `${this.#file.videoSize.height}px`;
         this.#player.setVideoItem(this.#file);
         this.#player.startAnimation();
         this.#loaded = true;
